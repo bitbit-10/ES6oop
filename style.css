@@ -14,7 +14,7 @@ button:active, button:focus {
 }
 
 #container{
-  margin: 5% 20% 5% 18%;
+  margin: 5% 10% 5% 8%;
 }
 label {
   font-size: 2em;
@@ -63,6 +63,7 @@ tbody {
 }
 #submitBtn {
   opacity: 0.90;
+  margin-left: 6%;
 }
 
 img {
