@@ -9,23 +9,82 @@ body, html {
   margin: 0;
   padding: 0;
 }
+button:active, button:focus {
+  outline: none !important;
+}
 
 #container{
-  margin: 5% 20% 5% 20%;
+  margin: 5% 20% 5% 18%;
+}
+label {
+  font-size: 2em;
+}
+.form-group {
+  margin-top: 7%;
+  margin-left: 2%;
+}
+.table-responsive {
+  margin-left: 2%;
+}
+thead {
+  height: 5em;
+  font-size: 2em;
+}
+tbody {
+  font-size: 1.1em;
+}
+
+.defect-col {
+  width: 30%;
+}
+.location-col {
+  width: 30%;
+}
+.photo-col {
+  width: 40%;
+}
+[hidden] {
+  display: none !important;
+}
+#file-chosen {
+  font-size: 1.8em;
+}
+#chooseFileBtn {
+  opacity: 0.7;
+  font-size: 1.8em;
+}
+.defectRow{
+  height: 5em;
+  font-size: 1.8em;
+}
+.button{
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+#submitBtn {
+  opacity: 0.90;
 }
 
 img {
-  width: 30%;
+  width: 100%;
   height: auto;
 }
+
 
 .success, .error {
   padding: 5%;
   width: 100%;
+  font-size: 2em;
+  /* height: 10%; */
 }
 .success {
   background: green;
 }
 .error {
   background: red;
+}
+@media print {
+  html, body {
+    height: auto;
+  }
 }

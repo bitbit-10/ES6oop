@@ -25,36 +25,62 @@
   <body>
     <div id="container">
       <!-- TITLE -->
-      <h2 id="title">Defect List</h2>
+      <h1 id="title">Defect List</h1>
       <!-- FORM -->
       <form id="form">
-        <div class="form-group">
-          <label for="defectDesc">Defect Description</label>
-          <input type="text" class="form-control" id="defectDesc" placeholder="Enter defect description">
+        <!-- == -->
+        <div class="form-group row">
+          <label for="defectDesc" class="col-lg-3">Defect Description</label>
+          <div class="col-lg-9">
+            <input type="text" class="form-control form-control-lg" id="defectDesc">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="location">Location</label>
-          <input type="text" class="form-control" id="location" placeholder="Where is this defect?">
+        <!-- == -->
+        <div class="form-group row">
+          <label for="location" class="col-lg-3">Defect Location</label>
+          <div class="col-lg-9">
+            <input type="text" class="form-control form-control-lg" id="location">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="imagefile">Upload Photo</label>
-          <input type="file" class="form-control-file" id="imagefile">
+
+        <!-- <div class="form-group row">
+          <label for="imagefile" class="col-lg-3">Upload Photo</label>
+          <div class="col-lg-9">
+            <input type="file" class="form-control-file form-control-lg" id="imagefile">
+          </div>
+        </div> -->
+
+        <div class="form-group row">
+          <label for="imagefile" class="col-lg-3"></label>
+          <div class="col-lg-9">
+            <label class="btn-lg btn-dark mr-4" id="chooseFileBtn">
+            Upload a Photo<input type="file" class="form-control-file form-control-lg" id="imagefile" onchange="fileChosen()" hidden>
+          </label><span id="file-chosen">No file chosen</span>
+          </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+        <div class="form-group row justify-content-end button">
+          <div class="col-lg-3"></div>
+          <div class="col-4">
+            <button type="submit" class="btn-lg btn-primary btn-block shadow-none" id="submitBtn">Submit</button>
+          </div>
+          <div class="col-3">
+            <button type="submit" class="btn-lg btn-outline-primary btn-block shadow-none" id="print-btn">Print</button>
+          </div>
+        </div>
       </form>
       <!-- LIST - Table -->
       <div class="table-responsive">
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col" class="defect-col">Defect</th>
+            <th scope="col" class="location-col">Location</th>
+            <th scope="col" class="photo-col">Photo</th>
           </tr>
         </thead>
         <tbody id="defect-list">
-
         </tbody>
       </table>
       </div>
