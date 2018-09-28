@@ -26,16 +26,17 @@
     <div id="container">
       <!-- TITLE -->
       <h1 id="title">Defect List</h1>
+
       <!-- FORM -->
       <form id="form">
-        <!-- == -->
+        
         <div class="form-group row">
           <label for="defectDesc" class="col-lg-3">Defect Description</label>
           <div class="col-lg-9">
             <input type="text" class="form-control form-control-lg" id="defectDesc">
           </div>
         </div>
-        <!-- == -->
+
         <div class="form-group row">
           <label for="location" class="col-lg-3">Defect Location</label>
           <div class="col-lg-9">
@@ -43,19 +44,12 @@
           </div>
         </div>
 
-        <!-- <div class="form-group row">
-          <label for="imagefile" class="col-lg-3">Upload Photo</label>
-          <div class="col-lg-9">
-            <input type="file" class="form-control-file form-control-lg" id="imagefile">
-          </div>
-        </div> -->
-
         <div class="form-group row">
           <label for="imagefile" class="col-lg-3"></label>
           <div class="col-lg-9">
             <label class="btn-lg btn-dark mr-4" id="chooseFileBtn">
             Upload a Photo<input type="file" class="form-control-file form-control-lg" id="imagefile" onchange="fileChosen()" hidden>
-          </label><span id="file-chosen">No file chosen</span>
+          </label><span id="file-chosen">No file chosen</span><img src="" id="store-file-dataURL" alt="" hidden>
           </div>
         </div>
 
